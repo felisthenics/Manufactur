@@ -2,20 +2,26 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
-  { href: "#start", label: "Start" },
-  { href: "#ueber-uns", label: "Über Uns" },
-  { href: "#kaffee", label: "Kaffee" },
-  { href: "#cafe", label: "Café" },
-  { href: "#speisekarte", label: "Speisekarte" },
-  { href: "#kontakt", label: "Kontakt" },
+  { anchor: "start", label: "Start" },
+  { anchor: "ueber-uns", label: "Über Uns" },
+  { anchor: "kaffee", label: "Kaffee" },
+  { anchor: "cafe", label: "Café" },
+  { anchor: "speisekarte", label: "Speisekarte" },
+  { anchor: "kontakt", label: "Kontakt" },
 ]
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
+
+  function getHref(anchor: string) {
+    return pathname === "/" ? `#${anchor}` : `/#${anchor}`
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,8 +49,8 @@ export function Navigation() {
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
-                key={link.href}
-                href={link.href}
+                key={link.anchor}
+                href={getHref(link.anchor)}
                 className="text-sm uppercase tracking-widest text-foreground/80 hover:text-foreground transition-colors"
               >
                 {link.label}
@@ -68,8 +74,8 @@ export function Navigation() {
             <div className="flex flex-col py-4">
               {navLinks.map((link) => (
                 <Link
-                  key={link.href}
-                  href={link.href}
+                  key={link.anchor}
+                  href={getHref(link.anchor)}
                   onClick={() => setIsOpen(false)}
                   className="px-6 py-3 text-sm uppercase tracking-widest text-foreground/80 hover:text-foreground hover:bg-muted transition-colors"
                 >
