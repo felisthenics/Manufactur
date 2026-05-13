@@ -36,6 +36,13 @@ yarn-error.log*
 # vercel
 .vercel
 
+# v0 source export (not part of the project)
+/manufactur-taunus-website/
+/manufactur-taunus-website.zip
+
+# Claude Code settings
+.claude/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
