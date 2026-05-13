@@ -4,27 +4,27 @@ import { useState } from "react"
 
 type MenuCategory = "kaffee" | "kalt" | "speisen"
 
-const menuItems: Record<MenuCategory, { name: string; description: string }[]> = {
+const menuItems: Record<MenuCategory, { name: string; description: string; price: string }[]> = {
   kaffee: [
-    { name: "Espresso", description: "" },
-    { name: "Doppio", description: "" },
-    { name: "Americano", description: "" },
-    { name: "Cappuccino", description: "" },
-    { name: "Latte Macchiato", description: "" },
-    { name: "Flat White", description: "" },
-    { name: "Griechischer Mokka", description: "" },
+    { name: "Espresso", description: "", price: "2,50 €" },
+    { name: "Doppio", description: "", price: "3,20 €" },
+    { name: "Americano", description: "", price: "3,00 €" },
+    { name: "Cappuccino", description: "", price: "3,80 €" },
+    { name: "Latte Macchiato", description: "", price: "4,20 €" },
+    { name: "Flat White", description: "", price: "4,00 €" },
+    { name: "Griechischer Mokka", description: "", price: "3,50 €" },
   ],
   kalt: [
-    { name: "Stilles Wasser", description: "" },
-    { name: "Mineralwasser", description: "" },
-    { name: "Fruchtsaft", description: "" },
-    { name: "Cold Brew", description: "saisonal" },
+    { name: "Stilles Wasser", description: "", price: "2,00 €" },
+    { name: "Mineralwasser", description: "", price: "2,20 €" },
+    { name: "Fruchtsaft", description: "", price: "3,00 €" },
+    { name: "Cold Brew", description: "saisonal", price: "4,50 €" },
   ],
   speisen: [
-    { name: "Hausgemachter Kuchen", description: "täglich wechselnd" },
-    { name: "Brownie", description: "" },
-    { name: "Tiramisu", description: "" },
-    { name: "Börekschnecke", description: "mit Spinat & Feta" },
+    { name: "Hausgemachter Kuchen", description: "täglich wechselnd", price: "3,80 €" },
+    { name: "Brownie", description: "", price: "3,50 €" },
+    { name: "Tiramisu", description: "", price: "4,50 €" },
+    { name: "Börekschnecke", description: "mit Spinat & Feta", price: "4,00 €" },
   ],
 }
 
@@ -86,6 +86,9 @@ export function MenuSection() {
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   )}
                 </div>
+                <span className="text-lg font-light text-primary ml-4 whitespace-nowrap">
+                  {item.price}
+                </span>
               </div>
             ))}
           </div>

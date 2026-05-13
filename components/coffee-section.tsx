@@ -5,21 +5,29 @@ const coffeeProducts = [
     name: "Espresso Blend",
     origin: "Blend / Hausröstung",
     description: "Unser kräftiger Hausbeschreibung – vollmundig, mit feiner Säure und stabiler Crema. Der perfekte Espresso für jeden Tag.",
+    price250: "8,90 €",
+    price500: "15,90 €",
   },
   {
     name: "Colombia",
     origin: "Kolumbien",
     description: "Fruchtig und ausgewogen – dieser Kolumbianer überzeugt mit sanfter Süße und einem angenehm langen Abgang.",
+    price250: "8,90 €",
+    price500: "15,90 €",
   },
   {
     name: "Ecuador",
     origin: "Ecuador",
     description: "Komplex und vielschichtig – mit floralen Noten und einer feinen Kakaonuance. Ein echter Geheimtipp für Kaffeeliebhaber.",
+    price250: "8,90 €",
+    price500: "15,90 €",
   },
   {
     name: "Chile",
     origin: "Chile",
     description: "Sanft und nuanciert – mit leichter Würze und einem milden, runden Körper. Ideal für alle, die es etwas gefälliger mögen.",
+    price250: "8,90 €",
+    price500: "15,90 €",
   },
 ]
 
@@ -68,6 +76,18 @@ export function CoffeeSection() {
                   <span className="px-2 py-1 bg-muted text-muted-foreground">
                     {coffee.origin}
                   </span>
+                </div>
+                <div className="flex items-baseline justify-between pt-3 border-t border-border">
+                  <div className="flex gap-4 text-sm">
+                    <span>
+                      <span className="text-muted-foreground text-xs">250g </span>
+                      <span className="font-medium text-primary">{coffee.price250}</span>
+                    </span>
+                    <span>
+                      <span className="text-muted-foreground text-xs">500g </span>
+                      <span className="font-medium text-primary">{coffee.price500}</span>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
