@@ -15,9 +15,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Manufactur Taunus | Kaffeerösterei & Café in Wehen',
-  description: 'Handgerösteter Kaffee aus Wehen im Taunus. Besuchen Sie unsere Rösterei und genießen Sie feinste Kaffeespezialitäten und hausgemachte Kuchen in unserem gemütlichen Café.',
-  keywords: ['Kaffeerösterei', 'Café', 'Wehen', 'Taunus', 'Kaffee', 'Rösterei', 'handgeröstet'],
+  title: 'Manufactur Café Rösterei am Taunus | Kaffeerösterei in Taunusstein-Wehen',
+  description: 'Handgerösteter Kaffee aus Taunusstein-Wehen im Taunus. Besuchen Sie unsere Rösterei und genießen Sie feinste Kaffeespezialitäten und hausgemachtes Gebäck in unserem gemütlichen Café.',
+  keywords: ['Kaffeerösterei Taunus', 'Café Taunusstein', 'eigene Röstung', 'bester Espresso Taunus', 'Kaffee Wehen', 'Specialty Coffee Taunus', 'Rösterei Wehen', 'Kaffee kaufen Taunus'],
 }
 
 export default function RootLayout({

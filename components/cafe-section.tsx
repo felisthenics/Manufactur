@@ -1,26 +1,22 @@
 import Image from "next/image"
-import { Coffee, Cake, Clock, MapPin } from "lucide-react"
+import { Coffee, Cake, UtensilsCrossed, Armchair } from "lucide-react"
 
 const features = [
   {
     icon: Coffee,
-    title: "Kaffeespezialitäten",
-    description: "Espresso, Cappuccino, Latte Macchiato und mehr – alles frisch zubereitet.",
+    title: "Espresso & Kaffeespezialitäten",
   },
   {
     icon: Cake,
-    title: "Hausgemachte Kuchen",
-    description: "Täglich frisch gebackene Kuchen und Torten nach Familienrezepten.",
+    title: "Hausgemachtes Gebäck & Kuchen",
   },
   {
-    icon: Clock,
-    title: "Gemütliche Atmosphäre",
-    description: "Nehmen Sie sich Zeit und genießen Sie in unserem einladenden Ambiente.",
+    icon: UtensilsCrossed,
+    title: "Tiramisu & Börekschnecke",
   },
   {
-    icon: MapPin,
-    title: "Im Herzen von Wehen",
-    description: "Zentral gelegen und gut erreichbar – mit Parkplätzen direkt vor der Tür.",
+    icon: Armchair,
+    title: "Innen- und Außensitzplätze",
   },
 ]
 
@@ -32,18 +28,17 @@ export function CafeSection() {
           {/* Content */}
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-4">
-              Unser Café
+              Das Café
             </p>
             <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
-              Mehr als nur
+              Gemütlich.
               <br />
-              <span className="italic font-medium">Kaffee</span>
+              <span className="italic font-medium">Authentisch.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-10">
-              Unser Café ist ein Ort zum Verweilen, Genießen und Entspannen. 
-              Ob Sie alleine kommen, mit Freunden oder der Familie – bei uns finden 
-              Sie immer einen gemütlichen Platz. Genießen Sie unsere frisch gerösteten 
-              Kaffeespezialitäten zusammen mit hausgemachten Köstlichkeiten.
+              Unser kleines Café in Taunusstein-Wehen lädt
+              zum Verweilen ein. Genießen Sie frisch gerösteten Kaffee
+              direkt am Entstehungsort – mit Blick auf unsere Röstmaschine.
             </p>
 
             {/* Features Grid */}
@@ -53,9 +48,8 @@ export function CafeSection() {
                   <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-secondary text-primary">
                     <feature.icon size={24} />
                   </div>
-                  <div>
-                    <h3 className="font-medium mb-1">{feature.title}</h3>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  <div className="flex items-center">
+                    <h3 className="font-medium">{feature.title}</h3>
                   </div>
                 </div>
               ))}

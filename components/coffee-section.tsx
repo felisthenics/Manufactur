@@ -2,36 +2,24 @@ import Image from "next/image"
 
 const coffeeProducts = [
   {
-    name: "Taunus Espresso",
-    description: "Kräftig, vollmundig mit feinen Schokoladennoten. Perfekt für alle Espresso-Liebhaber.",
-    origin: "Brasilien & Äthiopien",
-    roast: "Dunkel",
-    price: "12,90 €",
-    weight: "250g",
+    name: "Espresso Blend",
+    origin: "Blend / Hausröstung",
+    description: "Unser kräftiger Hausbeschreibung – vollmundig, mit feiner Säure und stabiler Crema. Der perfekte Espresso für jeden Tag.",
   },
   {
-    name: "Wehen Blend",
-    description: "Ausgewogen und aromatisch. Unser Allrounder für Filterkaffee und French Press.",
-    origin: "Kolumbien & Guatemala",
-    roast: "Mittel",
-    price: "11,90 €",
-    weight: "250g",
+    name: "Colombia",
+    origin: "Kolumbien",
+    description: "Fruchtig und ausgewogen – dieser Kolumbianer überzeugt mit sanfter Süße und einem angenehm langen Abgang.",
   },
   {
-    name: "Röstmeister Reserve",
-    description: "Unser Premium-Kaffee mit komplexen Frucht- und Nussaromen. Limitierte Edition.",
-    origin: "Äthiopien Yirgacheffe",
-    roast: "Hell",
-    price: "16,90 €",
-    weight: "250g",
+    name: "Ecuador",
+    origin: "Ecuador",
+    description: "Komplex und vielschichtig – mit floralen Noten und einer feinen Kakaonuance. Ein echter Geheimtipp für Kaffeeliebhaber.",
   },
   {
-    name: "Café Crema",
-    description: "Mild und bekömmlich mit samtiger Crema. Ideal für Vollautomaten.",
-    origin: "Brasilien",
-    roast: "Mittel-Dunkel",
-    price: "10,90 €",
-    weight: "250g",
+    name: "Chile",
+    origin: "Chile",
+    description: "Sanft und nuanciert – mit leichter Würze und einem milden, runden Körper. Ideal für alle, die es etwas gefälliger mögen.",
   },
 ]
 
@@ -45,13 +33,14 @@ export function CoffeeSection() {
             Unsere Kaffees
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight text-balance">
-            Frisch geröstet,
+            Ausgewählte Bohnen,
             <br />
-            <span className="italic font-medium">direkt aus der Manufaktur</span>
+            <span className="italic font-medium">meisterhaft geröstet</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Alle unsere Kaffees werden vor Ort in kleinen Chargen geröstet. 
-            Kaufen Sie direkt bei uns oder nehmen Sie Ihren Lieblingskaffee mit nach Hause.
+            Wir beziehen unsere Bohnen ausschließlich aus
+            Top-Anbaugebieten weltweit. Jede Sorte wird bei uns in
+            Taunusstein schonend und mit viel Erfahrung geröstet.
           </p>
         </div>
 
@@ -79,13 +68,6 @@ export function CoffeeSection() {
                   <span className="px-2 py-1 bg-muted text-muted-foreground">
                     {coffee.origin}
                   </span>
-                  <span className="px-2 py-1 bg-muted text-muted-foreground">
-                    {coffee.roast}
-                  </span>
-                </div>
-                <div className="flex items-baseline justify-between pt-3 border-t border-border">
-                  <span className="text-2xl font-light text-primary">{coffee.price}</span>
-                  <span className="text-sm text-muted-foreground">{coffee.weight}</span>
                 </div>
               </div>
             </div>

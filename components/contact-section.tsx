@@ -77,9 +77,9 @@ export function ContactSection() {
             </div>
             <h3 className="font-medium text-lg mb-2">Adresse</h3>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Manufactur Taunus
+              Manufactur Café Rösterei am Taunus
               <br />
-              Hauptstraße 12
+              Aarstraße 243-245
               <br />
               65232 Taunusstein-Wehen
             </p>
@@ -92,8 +92,8 @@ export function ContactSection() {
             </div>
             <h3 className="font-medium text-lg mb-2">Telefon</h3>
             <p className="text-primary-foreground/80 text-sm">
-              <a href="tel:+4961282012345" className="hover:text-primary-foreground transition-colors">
-                +49 (0) 6128 201 2345
+              <a href="tel:+4961289716446" className="hover:text-primary-foreground transition-colors">
+                +49 (0) 6128 9716446
               </a>
             </p>
           </div>
@@ -118,9 +118,9 @@ export function ContactSection() {
             </div>
             <h3 className="font-medium text-lg mb-2">Öffnungszeiten</h3>
             <div className="text-primary-foreground/80 text-sm leading-relaxed">
-              <p>Mo - Fr: 8:00 - 18:00</p>
-              <p>Sa: 9:00 - 17:00</p>
-              <p>So: 10:00 - 16:00</p>
+              <p>Mo – Fr: 9:00 – 19:00</p>
+              <p>Sa: nach Vereinbarung</p>
+              <p>So: geschlossen</p>
             </div>
           </div>
         </div>
@@ -130,7 +130,7 @@ export function ContactSection() {
           <div className="text-center">
             <MapPin size={48} className="mx-auto mb-4 opacity-50" />
             <p className="text-primary-foreground/60 text-sm">
-              Interaktive Karte · Taunusstein-Wehen
+              Aarstraße 243-245 · Taunusstein-Wehen
             </p>
           </div>
         </div>

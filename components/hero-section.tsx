@@ -20,7 +20,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
         <p className="text-sm uppercase tracking-[0.3em] mb-4 text-white/80">
-          Kaffeerösterei & Café in Wehen
+          Kaffeerösterei & Café in Taunusstein-Wehen
         </p>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-6 leading-tight text-balance">
           Manufactur
@@ -28,8 +28,9 @@ export function HeroSection() {
           <span className="font-semibold italic">Taunus</span>
         </h1>
         <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Erleben Sie handgerösteten Kaffee in seiner reinsten Form. 
-          Frisch geröstet, mit Leidenschaft zubereitet.
+          Frisch gerösteter Specialty Coffee aus Taunusstein.
+          Jede Tasse ein Handwerk – mit Leidenschaft und Sorgfalt
+          für Sie zubereitet.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link

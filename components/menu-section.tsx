@@ -2,52 +2,40 @@
 
 import { useState } from "react"
 
-type MenuCategory = "heiss" | "kalt" | "speisen"
+type MenuCategory = "kaffee" | "kalt" | "speisen"
 
-const menuItems = {
-  heiss: [
-    { name: "Espresso", description: "Kräftiger, aromatischer Shot", price: "2,50 €" },
-    { name: "Doppio", description: "Doppelter Espresso", price: "3,50 €" },
-    { name: "Cappuccino", description: "Espresso mit Milchschaum", price: "3,90 €" },
-    { name: "Latte Macchiato", description: "Geschichteter Milchkaffee", price: "4,20 €" },
-    { name: "Flat White", description: "Espresso mit samtiger Milch", price: "4,00 €" },
-    { name: "Americano", description: "Espresso verlängert mit Wasser", price: "3,20 €" },
-    { name: "Filterkaffee", description: "Handgebrüht, täglich wechselnd", price: "3,00 €" },
-    { name: "Café au Lait", description: "Filterkaffee mit heißer Milch", price: "3,80 €" },
-    { name: "Heiße Schokolade", description: "Cremig und vollmundig", price: "3,90 €" },
-    { name: "Tee", description: "Verschiedene Sorten", price: "3,20 €" },
+const menuItems: Record<MenuCategory, { name: string; description: string }[]> = {
+  kaffee: [
+    { name: "Espresso", description: "" },
+    { name: "Doppio", description: "" },
+    { name: "Americano", description: "" },
+    { name: "Cappuccino", description: "" },
+    { name: "Latte Macchiato", description: "" },
+    { name: "Flat White", description: "" },
+    { name: "Griechischer Mokka", description: "" },
   ],
   kalt: [
-    { name: "Iced Latte", description: "Espresso mit kalter Milch über Eis", price: "4,50 €" },
-    { name: "Iced Americano", description: "Espresso mit Eiswasser", price: "3,80 €" },
-    { name: "Cold Brew", description: "24h kalt extrahiert, mild und süß", price: "4,20 €" },
-    { name: "Affogato", description: "Vanilleeis mit Espresso", price: "5,50 €" },
-    { name: "Eiskaffee", description: "Mit Vanilleeis und Sahne", price: "5,90 €" },
-    { name: "Limonade", description: "Hausgemacht, verschiedene Sorten", price: "3,50 €" },
-    { name: "Mineralwasser", description: "Still oder mit Kohlensäure", price: "2,50 €" },
-    { name: "Apfelschorle", description: "Direktsaft aus der Region", price: "3,00 €" },
+    { name: "Stilles Wasser", description: "" },
+    { name: "Mineralwasser", description: "" },
+    { name: "Fruchtsaft", description: "" },
+    { name: "Cold Brew", description: "saisonal" },
   ],
   speisen: [
-    { name: "Käsekuchen", description: "Cremig nach Hausrezept", price: "4,50 €" },
-    { name: "Apfelkuchen", description: "Mit Streuseln, lauwarm serviert", price: "4,50 €" },
-    { name: "Schokoladentorte", description: "Intensiv schokoladig", price: "5,20 €" },
-    { name: "Karottenkuchen", description: "Saftig mit Frischkäse-Topping", price: "4,80 €" },
-    { name: "Croissant", description: "Frisch vom Bäcker, buttrig", price: "2,80 €" },
-    { name: "Zimtschnecke", description: "Fluffig und aromatisch", price: "3,50 €" },
-    { name: "Belegte Stulle", description: "Wechselnde Beläge", price: "5,90 €" },
-    { name: "Quiche", description: "Tagesaktuell, warm serviert", price: "6,50 €" },
-    { name: "Granola Bowl", description: "Mit Joghurt und frischem Obst", price: "7,50 €" },
+    { name: "Hausgemachter Kuchen", description: "täglich wechselnd" },
+    { name: "Brownie", description: "" },
+    { name: "Tiramisu", description: "" },
+    { name: "Börekschnecke", description: "mit Spinat & Feta" },
   ],
 }
 
-const categoryLabels = {
-  heiss: "Heiße Getränke",
-  kalt: "Kalte Getränke",
-  speisen: "Speisen & Kuchen",
+const categoryLabels: Record<MenuCategory, string> = {
+  kaffee: "Kaffeespezialitäten",
+  kalt: "Kaltgetränke",
+  speisen: "Speisen & Gebäck",
 }
 
 export function MenuSection() {
-  const [activeCategory, setActiveCategory] = useState<MenuCategory>("heiss")
+  const [activeCategory, setActiveCategory] = useState<MenuCategory>("kaffee")
 
   return (
     <section id="speisekarte" className="py-24 md:py-32 bg-secondary">
@@ -58,9 +46,9 @@ export function MenuSection() {
             Speisekarte
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight text-balance">
-            Unsere
+            Was wir
             <br />
-            <span className="italic font-medium">Köstlichkeiten</span>
+            <span className="italic font-medium">anbieten</span>
           </h2>
         </div>
 
@@ -94,11 +82,10 @@ export function MenuSection() {
               >
                 <div>
                   <h4 className="font-medium">{item.name}</h4>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                  {item.description && (
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  )}
                 </div>
-                <span className="text-lg font-light text-primary ml-4 whitespace-nowrap">
-                  {item.price}
-                </span>
               </div>
             ))}
           </div>
