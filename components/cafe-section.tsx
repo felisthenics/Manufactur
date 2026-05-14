@@ -56,8 +56,8 @@ export function CafeSection() {
             </div>
           </div>
 
-          {/* Images */}
-          <div className="grid grid-cols-2 gap-4">
+          {/* Images – Desktop (staggered grid, unverändert) */}
+          <div className="hidden lg:grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
@@ -85,6 +85,34 @@ export function CafeSection() {
                   className="object-cover"
                 />
               </div>
+            </div>
+          </div>
+
+          {/* Images – Mobile (horizontaler Scroll-Strip) */}
+          <div className="lg:hidden -mx-6 px-6 overflow-x-auto flex gap-3 pb-2 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
+            <div className="relative flex-shrink-0 w-[72vw] aspect-[3/4] overflow-hidden snap-start">
+              <Image
+                src="/images/cafe-interior.jpg"
+                alt="Café Interieur"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative flex-shrink-0 w-[55vw] aspect-[3/4] overflow-hidden snap-start">
+              <Image
+                src="/images/latte-art.jpg"
+                alt="Latte Art"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative flex-shrink-0 w-[55vw] aspect-[3/4] overflow-hidden snap-start">
+              <Image
+                src="/images/cake.jpg"
+                alt="Hausgemachter Kuchen"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

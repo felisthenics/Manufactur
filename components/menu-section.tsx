@@ -53,20 +53,22 @@ export function MenuSection() {
         </div>
 
         {/* Category Tabs */}
-        <div className="flex justify-center gap-2 mb-12">
-          {(Object.keys(menuItems) as MenuCategory[]).map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-6 py-3 text-sm uppercase tracking-widest transition-colors ${
-                activeCategory === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-card text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {categoryLabels[category]}
-            </button>
-          ))}
+        <div className="mb-12 -mx-6 px-6 md:mx-0 md:px-0">
+          <div className="flex overflow-x-auto gap-2 md:justify-center pb-1 [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
+            {(Object.keys(menuItems) as MenuCategory[]).map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`flex-shrink-0 px-6 py-3 text-sm uppercase tracking-widest transition-colors ${
+                  activeCategory === category
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-card text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {categoryLabels[category]}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Menu Items */}
