@@ -36,12 +36,17 @@ export function Navigation() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+          : "bg-gradient-to-b from-black/60 to-transparent"
       }`}
     >
       <nav className="mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="#start" className="text-2xl font-semibold tracking-wide text-foreground">
+          <Link
+            href={getHref("start")}
+            className={`text-2xl font-semibold tracking-wide transition-colors duration-300 ${
+              isScrolled ? "text-foreground" : "text-white"
+            }`}
+          >
             Manufactur Taunus
           </Link>
 
@@ -51,7 +56,11 @@ export function Navigation() {
               <Link
                 key={link.anchor}
                 href={getHref(link.anchor)}
-                className="text-sm uppercase tracking-widest text-foreground/80 hover:text-foreground transition-colors"
+                className={`text-sm uppercase tracking-widest transition-colors duration-300 ${
+                  isScrolled
+                    ? "text-foreground/80 hover:text-foreground"
+                    : "text-white/80 hover:text-white"
+                }`}
               >
                 {link.label}
               </Link>
@@ -61,7 +70,9 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-foreground"
+            className={`md:hidden p-2 transition-colors duration-300 ${
+              isScrolled ? "text-foreground" : "text-white"
+            }`}
             aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}

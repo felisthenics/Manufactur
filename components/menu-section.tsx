@@ -52,22 +52,41 @@ export function MenuSection() {
           </h2>
         </div>
 
-        {/* Category Tabs */}
-        <div className="mb-12 -mx-6 px-6 md:mx-0 md:px-0">
-          <div className="flex overflow-x-auto gap-2 md:justify-center pb-1 [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
-            {(Object.keys(menuItems) as MenuCategory[]).map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`flex-shrink-0 px-6 py-3 text-sm uppercase tracking-widest transition-colors ${
-                  activeCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-card text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {categoryLabels[category]}
-              </button>
-            ))}
+        {/* Category Tabs – Pyramide */}
+        <div className="mb-12 flex flex-col items-center gap-2">
+          {/* Reihe 1: Kaffeespezialitäten */}
+          <button
+            onClick={() => setActiveCategory("kaffee")}
+            className={`px-6 py-3 text-sm uppercase tracking-widest transition-colors ${
+              activeCategory === "kaffee"
+                ? "bg-primary text-primary-foreground"
+                : "bg-card text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            {categoryLabels.kaffee}
+          </button>
+          {/* Reihe 2: Kaltgetränke + Speisen & Gebäck */}
+          <div className="flex gap-2">
+            <button
+              onClick={() => setActiveCategory("kalt")}
+              className={`px-6 py-3 text-sm uppercase tracking-widest transition-colors ${
+                activeCategory === "kalt"
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-card text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {categoryLabels.kalt}
+            </button>
+            <button
+              onClick={() => setActiveCategory("speisen")}
+              className={`px-6 py-3 text-sm uppercase tracking-widest transition-colors ${
+                activeCategory === "speisen"
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-card text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {categoryLabels.speisen}
+            </button>
           </div>
         </div>
 

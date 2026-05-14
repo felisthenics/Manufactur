@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Coffee, Cake, UtensilsCrossed, Armchair } from "lucide-react"
+import { Coffee, Cake, UtensilsCrossed, Armchair, ChevronRight } from "lucide-react"
 
 const features = [
   {
@@ -89,30 +89,36 @@ export function CafeSection() {
           </div>
 
           {/* Images – Mobile (horizontaler Scroll-Strip) */}
-          <div className="lg:hidden -mx-6 px-6 overflow-x-auto flex gap-3 pb-2 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
-            <div className="relative flex-shrink-0 w-[72vw] aspect-[3/4] overflow-hidden snap-start">
-              <Image
-                src="/images/cafe-interior.jpg"
-                alt="Café Interieur"
-                fill
-                className="object-cover"
-              />
+          <div className="lg:hidden relative">
+            <div className="-mx-6 px-6 overflow-x-auto flex gap-3 pb-2 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
+              <div className="relative flex-shrink-0 w-[72vw] aspect-[3/4] overflow-hidden snap-start">
+                <Image
+                  src="/images/cafe-interior.jpg"
+                  alt="Café Interieur"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative flex-shrink-0 w-[55vw] aspect-[3/4] overflow-hidden snap-start">
+                <Image
+                  src="/images/latte-art.jpg"
+                  alt="Latte Art"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative flex-shrink-0 w-[55vw] aspect-[3/4] overflow-hidden snap-start">
+                <Image
+                  src="/images/cake.jpg"
+                  alt="Hausgemachter Kuchen"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
-            <div className="relative flex-shrink-0 w-[55vw] aspect-[3/4] overflow-hidden snap-start">
-              <Image
-                src="/images/latte-art.jpg"
-                alt="Latte Art"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="relative flex-shrink-0 w-[55vw] aspect-[3/4] overflow-hidden snap-start">
-              <Image
-                src="/images/cake.jpg"
-                alt="Hausgemachter Kuchen"
-                fill
-                className="object-cover"
-              />
+            {/* Swipe-Indikator */}
+            <div className="pointer-events-none absolute right-0 top-0 bottom-2 w-16 flex items-center justify-end pr-1 bg-gradient-to-l from-background/80 to-transparent">
+              <ChevronRight size={28} className="text-foreground/70 animate-bounce [animation-direction:alternate] [animation-duration:0.8s]" />
             </div>
           </div>
         </div>
