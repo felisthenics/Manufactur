@@ -89,8 +89,8 @@ export function CafeSection() {
           </div>
 
           {/* Images – Mobile (horizontaler Scroll-Strip) */}
-          <div className="lg:hidden relative">
-            <div className="-mx-6 px-6 overflow-x-auto flex gap-3 pb-2 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
+          <div className="lg:hidden relative -mx-6 overflow-hidden">
+            <div className="px-6 overflow-x-auto flex gap-3 pb-2 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
               <div className="relative flex-shrink-0 w-[72vw] aspect-[3/4] overflow-hidden snap-start">
                 <Image
                   src="/images/cafe-interior.jpg"

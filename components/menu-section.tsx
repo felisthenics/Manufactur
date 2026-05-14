@@ -57,13 +57,15 @@ export function MenuSection() {
           {/* Reihe 1: Kaffeespezialitäten */}
           <button
             onClick={() => setActiveCategory("kaffee")}
-            className={`px-6 py-3 text-sm uppercase tracking-widest transition-colors ${
+            className={`px-6 py-3 text-sm uppercase tracking-widest transition-colors text-center leading-relaxed ${
               activeCategory === "kaffee"
                 ? "bg-primary text-primary-foreground"
                 : "bg-card text-muted-foreground hover:text-foreground"
             }`}
           >
             {categoryLabels.kaffee}
+            <br />
+            <span className="invisible select-none">&nbsp;</span>
           </button>
           {/* Reihe 2: Kaltgetränke + Speisen & Gebäck */}
           <div className="flex gap-2">
