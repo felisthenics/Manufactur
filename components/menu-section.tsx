@@ -52,9 +52,27 @@ export function MenuSection() {
           </h2>
         </div>
 
-        {/* Category Tabs – Pyramide */}
-        <div className="mb-12 flex flex-col items-center gap-2">
-          {/* Reihe 1: Kaffeespezialitäten */}
+        {/* Category Tabs – Desktop: Reihe | Mobil: Pyramide */}
+
+        {/* Desktop */}
+        <div className="hidden md:flex justify-center gap-2 mb-12">
+          {(["kaffee", "kalt", "speisen"] as MenuCategory[]).map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-8 py-3 text-sm uppercase tracking-widest transition-colors ${
+                activeCategory === cat
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-card text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {categoryLabels[cat]}
+            </button>
+          ))}
+        </div>
+
+        {/* Mobil: Pyramide */}
+        <div className="md:hidden flex flex-col items-center gap-2 mb-12">
           <button
             onClick={() => setActiveCategory("kaffee")}
             className={`px-6 py-3 text-sm uppercase tracking-widest transition-colors text-center leading-relaxed ${
@@ -67,7 +85,6 @@ export function MenuSection() {
             <br />
             <span className="invisible select-none">&nbsp;</span>
           </button>
-          {/* Reihe 2: Kaltgetränke + Speisen & Gebäck */}
           <div className="flex gap-2">
             <button
               onClick={() => setActiveCategory("kalt")}

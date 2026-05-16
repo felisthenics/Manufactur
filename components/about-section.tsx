@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function AboutSection() {
   return (
-    <section id="ueber-uns" className="py-24 md:py-32 bg-background">
+    <section id="philosophie" className="py-24 md:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
@@ -18,7 +18,7 @@ export function AboutSection() {
           {/* Content */}
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-4">
-              Über Uns
+              Philosophie
             </p>
             <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
               Mit Leidenschaft

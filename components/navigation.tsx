@@ -7,10 +7,11 @@ import { Menu, X } from "lucide-react"
 
 const navLinks = [
   { anchor: "start", label: "Start" },
-  { anchor: "ueber-uns", label: "Über Uns" },
+  { anchor: "philosophie", label: "Philosophie" },
   { anchor: "kaffee", label: "Kaffee" },
   { anchor: "cafe", label: "Café" },
   { anchor: "speisekarte", label: "Speisekarte" },
+  { anchor: "ueber-uns", label: "Über Uns" },
   { anchor: "kontakt", label: "Kontakt" },
 ]
 

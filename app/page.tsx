@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/about-section"
 import { CoffeeSection } from "@/components/coffee-section"
 import { CafeSection } from "@/components/cafe-section"
 import { MenuSection } from "@/components/menu-section"
+import { TeamSection } from "@/components/team-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
@@ -16,6 +17,7 @@ export default function Home() {
       <CoffeeSection />
       <CafeSection />
       <MenuSection />
+      <TeamSection />
       <ContactSection />
       <Footer />
     </main>
